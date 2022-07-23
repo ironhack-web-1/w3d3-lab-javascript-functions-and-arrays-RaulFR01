@@ -285,7 +285,21 @@ const matrix = [
   ],
 ];
 
-function greatestProduct() {}
+function greatestProduct(matrix) {
+  let max = 0;
+
+  for (let i = 0; i < matrix.length; i++) {
+    let answer = 1;
+    if (answer > max) {
+      max = answer;
+    }
+    for (let j = 0; j < i; j++) {
+      answer = answer * matrix[i][j];
+    }
+  }
+
+  return max;
+}
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
